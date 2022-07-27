@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+  padding: 0;
+  margin: 0;
+}
+body, html{
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+
+}
+.App{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  display: flexbox;
+  display: -ms-flexbox;
+
+}
+
+.side-bar{
+  width: 25%;
+  height: 100%; 
+  /* position: absolute; */
+  overflow: hidden;
+  
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.sideBar-header{
+  border: none;
+    border-right: 0.15em solid #b6b3b3;
+    border-bottom: 0.15em solid #b6b3b3;
+  width:  100%;
+  /* padding: 10px; */
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 60px;
+  display: flex;
+  display: -ms-flexbox;
+  display: flexbox;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.sideBar-header h2{
+  font-size: 20px;
+  
+}
+.header{
+  background: #8f8e8e;
+}
+
+
+/* header admin details */
+.admin-image{
+  margin-right: 10px;  
+}
+
+
+/* side bar dropdown stylings */
+.sideBar-nav-links{
+  list-style: none;
+  padding: 0;
+  display: block;
+  background: #fff;
+
+
+}
+.sideBar-nav-links .nav-component{
+  display: block;
+  width: 100%;
+
+}
+.sideBar-nav-links .nav-component .dropdown{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 10px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 20px;
+  
+}
+.sideBar-nav-links .nav-component .dropdown .sideBar-icon{
+  font-size: 30px;
+
+}
+
+.sideBar-nav-links .nav-component .dropdown .accordionbtn-txt{
+  margin-left: 30px;
+}
+.sideBar-nav-links .nav-component .dropdown:hover{
+  cursor: pointer;
+  background-color: #e9dede;
+}
+.sideBar-nav-links .nav-component .dropdown .accordionbtn-txt{
+  margin-left: 10px;
+}
+.accordion-child{
+  overflow: hidden;
+  max-height: 0;
+  display: block;
+
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+
+
+.accordion-child.show{
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+
+}
+.accordion-child .accordion-children{
+  display: block;
+  padding: 5px 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  
+
+}
+
+
+
+
+@media  only screen and (max-width: 700px) {
+  .sideBarBtn{
+    display: none;
+  }
+  .headerSideBarBtn{
+    display: block;
+
+  }
+}
