@@ -38,8 +38,14 @@ const DetailsContainer = styled.div`
     .AdminDetails{
         display: grid;
         justify-content: center;
+
         .AdminType{
             font-size:15px;
+        }
+        @media only screen and(max-width: 700px){
+            .AdminDetails{
+                display: none;
+            }
         }
 
     }
